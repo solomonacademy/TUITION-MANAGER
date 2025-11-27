@@ -114,5 +114,3 @@ function updateChart(){
 // Init
 updateUI();
 showSection('dashboard');
-
-
