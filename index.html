@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tuition Manager</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<!-- Sidebar -->
+<div class="sidebar">
+    <h2>Tuition Manager</h2>
+    <ul>
+        <li onclick="showSection('dashboard')">Dashboard</li>
+        <li onclick="showSection('students')">Students</li>
+    </ul>
+</div>
+
+<!-- Main -->
+<div class="main">
+    <!-- Dashboard -->
+    <div id="dashboard" class="section">
+        <h1>Dashboard</h1>
+        <div class="stats">
+            <div class="stat-card">
+                <h3>Total Students</h3>
+                <p id="totalStudents">0</p>
+            </div>
+            <div class="stat-card">
+                <h3>Paid Students</h3>
+                <p id="paidStudents">0</p>
+            </div>
+            <div class="stat-card">
+                <h3>Unpaid Students</h3>
+                <p id="unpaidStudents">0</p>
+            </div>
+        </div>
+        <div class="chart-container">
+            <canvas id="paymentChart"></canvas>
+        </div>
+    </div>
+
+    <!-- Students -->
+    <div id="students" class="section" style="display:none;">
+        <h1>Student Management</h1>
+        <div class="card">
+            <h2>Add Student</h2>
+            <input id="studentID" placeholder="Student ID">
+            <input id="studentName" placeholder="Full Name">
+            <input id="studentPhone" placeholder="Phone (+countrycode)">
+            <button id="addStudentBtn">Register Student</button>
+        </div>
+
+        <div class="card">
+            <h2>Student List</h2>
+            <input id="searchInput" placeholder="Search by ID or Name">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th><th>Name</th><th>Phone</th><th>Status</th><th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="studentTable"></tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

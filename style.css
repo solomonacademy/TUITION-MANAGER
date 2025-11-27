@@ -1,0 +1,45 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Roboto', sans-serif; background:#f2f5fa; display:flex; min-height:100vh; }
+
+/* Sidebar */
+.sidebar { width:220px; background:linear-gradient(180deg,#4a6cf7,#2c45c4); color:white; padding:20px; height:100%; position:fixed; }
+.sidebar h2 { text-align:center; margin-bottom:25px; }
+.sidebar ul { list-style:none; padding:0; }
+.sidebar ul li { padding:15px; cursor:pointer; border-radius:12px; margin:12px 0; transition:0.3s; }
+.sidebar ul li:hover { background:rgba(255,255,255,0.15); }
+
+/* Main content */
+.main { flex:1; margin-left:220px; padding:25px 20px; }
+
+/* Sections */
+.section { animation:fadeIn 0.5s; }
+@keyframes fadeIn { from{opacity:0;} to{opacity:1;} }
+
+/* Cards */
+.card { background:white; padding:20px; margin-bottom:20px; border-radius:20px; box-shadow:0 10px 25px rgba(0,0,0,0.08); }
+.card input { width:100%; padding:12px; margin:8px 0; border-radius:12px; border:1px solid #ccc; font-size:15px; }
+.card button { padding:12px; width:100%; border:none; border-radius:15px; background:linear-gradient(90deg,#4a6cf7,#2c45c4); color:white; font-size:16px; cursor:pointer; margin-top:8px; }
+.card button:hover { transform:scale(1.03); }
+
+/* Table */
+table { width:100%; border-collapse: collapse; margin-top:15px; }
+th, td { padding:12px; border-bottom:1px solid #eee; text-align:center; }
+th { background:#4a6cf7; color:white; border-radius:8px; }
+.paid { color:#28a745; font-weight:bold; }
+.unpaid { color:#dc3545; font-weight:bold; }
+
+/* Stats cards */
+.stats { display:flex; flex-wrap:wrap; justify-content:center; margin-bottom:20px; }
+.stat-card { flex:1 1 150px; margin:10px; min-width:140px; background:linear-gradient(135deg,#4a6cf7,#2c45c4); padding:20px; border-radius:20px; text-align:center; color:white; }
+.stat-card h3 { margin-bottom:10px; font-weight:500; }
+.stat-card p { font-size:22px; font-weight:700; }
+
+/* Chart */
+.chart-container { position:relative; width:100%; max-width:400px; margin:auto; }
+
+/* Responsive */
+@media(max-width:768px){
+    body { flex-direction:column; }
+    .sidebar { width:100%; height:auto; position:relative; border-radius:0; }
+    .main { margin-left:0; padding:15px; }
+}
